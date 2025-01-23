@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title><link rel="stylesheet" href="./main.css">
 </head>
 <body>
     <header>
@@ -13,7 +13,12 @@
         <button type="submit">Nova imagem +</button>
     </header>
     <form>
-        
+        <h2>Inserir nova imagem</h2>
+        <input type="url" required placeholder="URL da imagen">
+        <button type="submit">Adicionar</button>
+        <button id="cancel-button" type="reset">Cancelar</button>
     </form>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
