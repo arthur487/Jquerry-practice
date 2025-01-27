@@ -13,9 +13,11 @@ $(document).ready(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
         const newImageLink = $('#link-new-image').val();
-        const NewItem = $('<li></li>');
-        $(`<img src="${newImageLink}" />`).appendto(NewItem);
-        $(`<div class="overlay-image-link"> <a href="${newImageLink}" target="_blank" title="ver imagen en tamanho real" </a> </div>`).appendto(NewItem);
-        $(NewItem).appendto('ul');
+        const NewItem = $('<li style="display: none"></li>');
+        $(`<img src="${newImageLink}" />`).appendTo(NewItem);
+        $(`<div class="overlay-image-link"> <a href="${newImageLink}" target="_blank" title="ver imagen en tamanho real"> ver imagem en tamanho real </a> </div>`).appendTo(NewItem);
+        $(NewItem).appendTo('ul');
+        $(NewItem).fadeIn();
+        $('#link-new-image').val('');
     })
 })
